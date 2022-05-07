@@ -81,3 +81,17 @@ with sns.axes_style('whitegrid'):
                )
  
 plt.show()
+
+
+# ---------------------------------- displot 直方趋势图 ---------------------------------------------- #
+sns.displot(data['PRICE'], 
+            bins=50, 
+            aspect=2,
+            kde=True, 
+            color='#2196f3')
+
+plt.title(f'1970s Home Values in Boston. Average: ${(1000*data.PRICE.mean()):.6}')
+plt.xlabel('Price in 000s')
+plt.ylabel('Nr. of Homes')
+
+plt.show()
