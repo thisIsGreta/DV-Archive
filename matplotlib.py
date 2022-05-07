@@ -55,6 +55,12 @@ plt.show()
 
 
 # --------------------------How to add tick formatting for dates on the x-axis. ---------------------------- #
+import matplotlib.dates as mdates
+
+years = mdates.YearLocator()
+months = mdates.MonthLocator()
+years_fmt = mdates.DateFormatter('%Y')
+
 ax1.xaxis.set_major_locator(years)
 ax1.xaxis.set_major_formatter(years_fmt)
 ax1.xaxis.set_minor_locator(months)
