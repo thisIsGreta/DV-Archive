@@ -33,14 +33,18 @@ box.show()
 
 
 # ----------------------------- Bar Chart 柱状图-----------------------------#
-h_bar = px.bar(x = category_installs.Installs,
+bar = px.bar(x = category_installs.Installs,
                y = category_installs.index,
                orientation='h',
+               color = prizes_per_category.values,
+               color_continuous_scale='Aggrnyl',
                title='Category Popularity')
 
-h_bar.update_layout(xaxis_title='Number of Downloads', yaxis_title='Category')
+bar.update_layout(xaxis_title='Number of Downloads', 
+                    coloraxis_showscale=False,
+                    yaxis_title='Category')
 
-h_bar.show()
+bar.show()
 
 
 
