@@ -1,6 +1,22 @@
 import matplotlib.pyplot as plt
+%matplotlib inline # for jupyter notebook only
 
-# -------------------------Two different axes on one line chart--------------------------- #
+
+
+# ------------------------- Histograms 直方图--------------------------- #
+plt.figure(figsize=(10,6))
+plt.hist(data['PRICE'], 
+         bins=10,          # bins determine how our prices are grouped together to form the individual bars - if it's 3, we get three bars
+         ec='black',       # ec是bar描边
+         color='#79DAE8',  # bar的颜色
+        )    
+plt.xlabel("Price in 000s")
+plt.ylabel("Number of House")
+plt.show() 
+
+
+
+# ------------------------- Two different axes on one line chart--------------------------- #
 plt.figure(figsize=(14, 8), dpi=120)
 plt.title('Tesla Web Search vs Price', fontsize=18)
 plt.xticks(fontsize=14, rotation=45)
