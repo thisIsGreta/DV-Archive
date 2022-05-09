@@ -87,7 +87,8 @@ plt.show()
 sns.displot(data['PRICE'], 
             bins=50, 
             aspect=2,
-            kde=True, 
+            hist=True,   #是否有直方图
+            kde=True,    #是否有趋势图
             color='#2196f3')
 
 plt.title(f'1970s Home Values in Boston. Average: ${(1000*data.PRICE.mean()):.6}')
