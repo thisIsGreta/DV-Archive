@@ -23,6 +23,8 @@ plt.show()
 
 # --------------------- Bubble Charts -------------------------- #
 plt.figure(figsize=(8,4), dpi=200)
+
+sns.set_style("white_grid")
  
 ax = sns.scatterplot(data=data_clean,
                      x='USD_Production_Budget', 
