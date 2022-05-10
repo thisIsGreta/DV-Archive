@@ -2,6 +2,25 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+
+# --------------------- Heat Map (half)-------------------------- #
+import numpy as np
+
+mask = np.zeros_like(data.corr())
+triangle_indices = np.triu_indices_from(mask)
+mask[triangle_indices]= True
+
+plt.figure(figsize=(16,20))
+sns.heatmap(data.corr(),
+            mask=mask,
+            annot=True,
+            annot_kws={"size":12})
+
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.show()
+
+
 # --------------------- Bubble Charts -------------------------- #
 plt.figure(figsize=(8,4), dpi=200)
  
