@@ -28,7 +28,10 @@ ax = sns.scatterplot(data=data_clean,
                      x='USD_Production_Budget', 
                      y='USD_Worldwide_Gross',
                      hue='USD_Worldwide_Gross',     # colour
-                     size='USD_Worldwide_Gross',)   # dot size
+                     size='USD_Worldwide_Gross',    # dot size
+                     alpha=0.6,                     # dot transparency - to see how dense
+                     s=80                           # dot size as well
+                    )
  
 ax.set(ylim=(0, 3000000000),
        xlim=(0, 450000000),
