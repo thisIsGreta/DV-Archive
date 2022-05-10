@@ -16,7 +16,7 @@ sns.heatmap(data.corr(),
             annot=True,
             annot_kws={"size":12})
 
-plt.xticks(fontsize=14)
+plt.xticks(fontsize=14) # ticks是刻度，label是标题
 plt.yticks(fontsize=14)
 plt.show()
 
