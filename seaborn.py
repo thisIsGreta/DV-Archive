@@ -3,6 +3,15 @@ import seaborn as sns
 
 
 
+# --------------------- Pair Plot with Regression-------------------------- #
+%%time
+sns.pairplot(data,
+             kind="reg",
+             plot_kws={"line_kws":{"color":"cyan"},
+                      }
+            )
+plt.show()
+
 # --------------------- Heat Map (half)-------------------------- #
 import numpy as np
 
