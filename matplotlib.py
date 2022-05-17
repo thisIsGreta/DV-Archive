@@ -1,5 +1,17 @@
 import matplotlib.pyplot as plt
-%matplotlib inline # for jupyter notebook only
+%matplotlib inline                # for jupyter notebook only
+
+
+
+# -----------------------------------Scatter-Plot--------------------------Graph of Actual vs. Predicted Prices #
+corr = round(y_train.corr(results.fittedvalues), 2)
+plt.figure(figsize=(14, 8))
+plt.scatter(x=y_train, y=results.fittedvalues, color='navy', alpha=0.6)
+plt.plot(y_train, y_train, color='cyan', alpha=0.4)
+plt.xlabel('Actual Log Prices $ y _i$', fontsize=20)
+plt.ylabel('Predicted Log Prices $\hat y _i$', fontsize=20)
+plt.title(f'Actual vs. Predicted log prices: $y _i $ vs $\hat y _i$ (corr = {corr})', fontsize=20)
+plt.show
 
 
 
